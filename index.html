@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tradutor Online">
+    <meta name="author" content="Lucas Rosa de Souza">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Meu To Do List</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="popUp">
+            <h3>Tarefa Completada!</h3>
+        </div>
+        <div class="popUp_2">
+            <h3>Removido com sucesso!</h3>
+        </div>
+        <div id="content">
+            <div id="taskInput">
+                <form>
+                    <input type="text" id="taskInputText" placeholder="Adicionar Tarefa . . ." required>
+                    <button type="button" id="slideLeft" class="fa fa-long-arrow-left"></button>
+                    <button type="button" id="addTask" class="fa fa-plus"></button>
+                    <button type="button" id="slideRight" class="fa fa-long-arrow-right"></button>
+                </form>
+            </div>
+            <div id="taskOutput">
+                <!--<div id="task">
+                    <form id="form">
+                        <input type="checkbox" id="checkbox">
+                    </form>
+                    <p id="task_">Estudar Javascript</p>
+                    <div id="closeDiv" class="closeDiv">
+                        
+                    </div>
+                </div>-->
+            </div>
+            <div id="taskSettings">
+                <div class="options" id="remainingItems">
+                    <p id="paragraph_1"><span id="counter">0</span> ITEM RESTANTE</p>
+                </div>
+                <div class="options" id="showCertainItems">
+                    <h3 class="buttons">TO DO LIST</h3>
+                    <!--<p>-</p>
+                    <p class="buttons">Somente Completados</p>-->
+                </div>
+                <div class="options" id="clearItems">
+                    <p class="buttons removeCompletedTask">REMOVER COMPLETADOS</p>
+                </div>
+            </div>
+
+            <div id="gallery">
+                <div id="left_div">
+                    <button id="btn_left" class="fa fa-long-arrow-left"></button>
+                </div>
+                <div id="gallery_quotes">
+                    <div class="slide"><img src="/img/image--1.png"></div>
+                    <div class="slide"><img src="/img/image--2.png"></div>
+                    <div class="slide"><img src="/img/image--3.png"></div>
+                </div>
+                <div id="right_div">
+                    <button id="btn_right" class="fa fa-long-arrow-right"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
