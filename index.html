@@ -21,48 +21,32 @@
         <div id="content">
             <div id="taskInput">
                 <form>
-                    <input type="text" id="taskInputText" placeholder="Adicionar Tarefa . . ." required>
+                    <input type="text" id="input" placeholder="Adicionar Tarefa . . ." required>
                     <button type="button" id="slideLeft" class="fa fa-long-arrow-left"></button>
                     <button type="button" id="addTask" class="fa fa-plus"></button>
                     <button type="button" id="slideRight" class="fa fa-long-arrow-right"></button>
                 </form>
             </div>
-            <div id="taskOutput">
-                <!--<div id="task">
-                    <form id="form">
-                        <input type="checkbox" id="checkbox">
-                    </form>
-                    <p id="task_">Estudar Javascript</p>
-                    <div id="closeDiv" class="closeDiv">
-                        
-                    </div>
-                </div>-->
+            <div id="taskOutput" class="taskOutput">
+                <!--<div id="task_div"> -->
+                    <ul id="list">
+                        <!--<li id="item">
+                        <i class="fa fa-circle-thin co" job="complete" id="0" ></i>
+                        <p class="text">Estudar Javascript</p>
+                        <i class="fa fa-trash-o de clear" job="delete" id="0"></i>
+                        </li> -->
+                    </ul>
+                <!--</div>-->
             </div>
             <div id="taskSettings">
                 <div class="options" id="remainingItems">
-                    <p id="paragraph_1"><span id="counter">0</span> ITEM RESTANTE</p>
+                    <p id="paragraph_1"><span id="counter"></span></p>
                 </div>
                 <div class="options" id="showCertainItems">
                     <h3 class="buttons">TO DO LIST</h3>
-                    <!--<p>-</p>
-                    <p class="buttons">Somente Completados</p>-->
                 </div>
                 <div class="options" id="clearItems">
-                    <p class="buttons removeCompletedTask">REMOVER COMPLETADOS</p>
-                </div>
-            </div>
-
-            <div id="gallery">
-                <div id="left_div">
-                    <button id="btn_left" class="fa fa-long-arrow-left"></button>
-                </div>
-                <div id="gallery_quotes">
-                    <div class="slide"><img src="/img/image--1.png"></div>
-                    <div class="slide"><img src="/img/image--2.png"></div>
-                    <div class="slide"><img src="/img/image--3.png"></div>
-                </div>
-                <div id="right_div">
-                    <button id="btn_right" class="fa fa-long-arrow-right"></button>
+                    <i id="clear" class="buttons removeCompletedTask fa fa-refresh"></i>
                 </div>
             </div>
         </div>

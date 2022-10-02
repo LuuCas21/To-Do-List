@@ -61,7 +61,6 @@ body {
 }
 
 .wrapper > #content > #taskOutput {
-    
     width:50%; 
     height:320px; /*320px*/
     align-self:center;
@@ -94,7 +93,7 @@ body {
     margin-right:5px;
 }
 
-.wrapper > #content > #taskInput > form > #taskInputText {
+.wrapper > #content > #taskInput > form > #input {
     width:0;
     height:60px;
     text-indent:30px;
@@ -145,13 +144,9 @@ box-shadow: -4px 4px 22px -9px rgba(0,0,0,0.53);
     transition:all 0.3s;
 }
 
-#taskSettings > .options > .removeCompletedTask:hover {
-    color:#5b9fe3;
-}
-
-#taskSettings > .options > .removeCompletedTask {
+#taskSettings > .options > .fa-refresh {
     background-color:inherit;
-    border:none;
+    font-size:20px;
 }
 
 #taskSettings > #remainingItems {
@@ -171,46 +166,67 @@ box-shadow: -4px 4px 22px -9px rgba(0,0,0,0.53);
     border-top:1px solid #efecec;
 }
 
-.wrapper > #content > #taskOutput > #task {
-    width:100%;
-    height:52px;
-    border-bottom:2px solid #efecec;
+.wrapper > #content > #taskOutput > #list > #item {
+    width:auto;
+    height:50px;
+    list-style-type:none;
     display:flex;
+    justify-content: space-around;
     align-items:center;
-    justify-content: space-evenly;
+    border-bottom:1px solid var(--color5);
 }
 
-.wrapper > #content > #taskOutput > #task > #task_ {
+.wrapper > #content > #taskOutput > #list > #item > .text {
     font-weight:bold;
     font-size:20px;
     width:70%;
+    /*text-decoration:line-through;*/ /* Use Later */
 }
 
-.wrapper > #content > #taskOutput > #task > #closeDiv {
+.wrapper > #content > #taskOutput > #list > #item > .clear {
     width:auto;
     height:auto;
     margin:0 auto;
-    font-size:25px;
+    font-size:20px;
     cursor:pointer;
     display:flex;
-    /*justify-content:center;*/
+    transition:all 0.2s ease-in-out;
 }
 
-#closeDiv:after {
+.wrapper > #content > #taskOutput > #list > #item > .clear:hover {
+    color:red;
+}
+
+.fa-check-circle{
+    color:#6eb200;
+}
+
+.lineThrough {
+    text-decoration:line-through;
+    color : #ccc;
+}
+
+/*#closeDiv:after {
     display:inline-block;
     content:"\00d7";
-}
+}*/
 
-.wrapper > #content > #taskOutput > #task > #form {
+/*.wrapper > #content > #taskOutput > #task_div > #form {
     width:10%;
     display:flex;
     justify-content:center;
+}*/
+
+.wrapper > #content > #taskOutput > #list > #item > .fa-circle-thin {
+    width:80px;
+    font-size:20px;
+    text-align:center;
 }
 
-.wrapper > #content > #taskOutput > #task > #formTask > #checkbox {
+.wrapper > #content > #taskOutput > #list > #item > .fa-check-circle {
     width:80px;
-    outline:none;
-    /*border-radius:50%;*/
+    font-size:20px;
+    text-align:center;
 }
 
 .popUp { 
@@ -251,61 +267,8 @@ box-shadow: -4px 4px 22px -9px rgba(0,0,0,0.53);
     display:none;
 }
 
-#gallery {
-    width:50%;
-    height:180px;
-    align-self:center;
-    background-color:inherit;
-    margin-top:15px;
-    margin-bottom:25px;
-    display:flex;
-}
-
-#gallery > #gallery_quotes {
-    position:relative;
-    width:450px; /*450px*/
-    height:180px;
-    margin:0 auto;
-    overflow:hidden;
-}
-
-#gallery > #gallery_quotes > .slide {
-    position:absolute;
-    width:100%;
-    height:180px;
-    transition:1s;
-}
-
-#gallery > #left_div {
-    width:100px;
-    height:180px;
-    display:flex;
-    justify-content:center;
-}
-
-#left_div > button {
-    width:auto;
-    height:auto;
-    align-self:center;
-    border:none;
-    cursor:pointer;
-    background-color:inherit;
-}
-
-#gallery > #right_div {
-    width:100px;
-    height:180px;
-    display:flex;
-    justify-content:center;
-}
-
-#gallery > #right_div > button {
-    width:auto;
-    height:auto;
-    align-self:center;
-    border:none;
-    cursor:pointer;
-    background-color:inherit;
+#counter {
+    font-size:20px;
 }
 
 @media screen and (max-width:1246px) { /*1050px*/
@@ -321,28 +284,6 @@ box-shadow: -4px 4px 22px -9px rgba(0,0,0,0.53);
 
     .wrapper > #content > #taskInput {
         width:95%;
-    }
-
-    #gallery {
-        width:95%;
-    }
-
-    #right_div > button {
-        position:absolute;
-    }
-
-    #left_div > button {
-        position:absolute;
-    }
-
-    #gallery > #gallery_quotes > .slide {
-        display:flex;
-    }
-
-    #gallery > #gallery_quotes > .slide > img {
-        width:100%;
-        height:auto;
-        align-self:center;
     }
 
     .popUp {
